@@ -4,7 +4,7 @@
 # Change from DHCP to static IP using the same IP
 # Get the name of the network adapter
 $nicname = Get-NetAdapter  | select -ExpandProperty "name"
-
+#added a comment here
 # Get current IP Address, Prefix Length (subnet mask), and gateway
 $ipaddress = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | select -ExpandProperty "IPAddress"
 $prefixlength = Get-NetIPAddress -InterfaceAlias $nicname -AddressFamily IPv4 | select -ExpandProperty "PrefixLength"
